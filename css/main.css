@@ -77,6 +77,10 @@
   font-family: "Cairo", sans-serif;
   text-transform: capitalize;
 }
+a{
+  text-decoration: none;
+} 
+  
 .header{
 background-color: rgba(var(--color-green-rgb), 0.6);
 height: 100px;
@@ -84,46 +88,27 @@ height: 100px;
 .header .container{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: inherit;
   color: var(--color-white);
 }
 .header .container .logo img{
   width: 100px;
 }
-.header .container .links{
-  width: 15%;
-}
-.header .container ul{
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.header .container ul a{
-  color: var(--color-blue);
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: none;
-}
+
 .section-one{
   height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.main-l-img{
-  max-width: 500px;
-  position: relative;
-}
 .section-one .information{
   color: var(--color-white);
   line-height: 2;
 }
 .main-l-img img{
-  position: absolute;
-  left: -100px;
-  top: -180px;
+  margin-right: 200px;
+  width: 20em;
   animation: top-bottom 2s infinite both;
   animation-timing-function: ease;
   animation-direction:alternate;
@@ -154,6 +139,9 @@ height: 100px;
 .section-two{
   background-color: rgba(var(--color-blue-rgb),0.8);
 }
+.section-two a{
+  color: #eee;
+}
 .box{
   display: flex;
   flex-direction: column;
@@ -176,7 +164,85 @@ height: 100px;
 .box img{
   width: 50%;
 }
-
+.footer{
+  height: 100px;
+  color: #eee;
+}
+.footer .container{
+  height: inherit;
+}
+.footer .row{
+  height: inherit;
+}
+.footer .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.icons a svg{
+  font-size: 20px;
+}
+@media (max-width:747px) {
+  .header{
+height: 60px;
+}
+.header .container .logo img{
+  width: 70px;
+}
+.section-one{
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-one h1{
+  font-size: 20px;
+}
+.section-one p{
+  font-size: 15px;
+}
+.section-one .information{
+  color: var(--color-white);
+  line-height: 1.4;
+}
+.main-l-img img{
+  margin-top: 25px;
+  margin-right: 50px;
+  width: 15em;
+  animation: top-bottom 2s infinite both;
+  animation-timing-function: ease;
+  animation-direction:alternate;
+}
+.section-one .forms form{
+  display: flex;
+  flex-direction: column;
+}
+.section-one .forms form input{
+  height: 30px;
+  padding: 6px;
+  line-height: 10px;
+}
+.section-one .forms form input:last-child{
+  margin-bottom: 15px;
+}
+.box{
+  height: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.box p {
+  font-size: 16px;
+  padding-top: 10px;
+}
+.box .img{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.box img{
+  width: 50%;
+}
+}
 
 
 @keyframes top-bottom {
